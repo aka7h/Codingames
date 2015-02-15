@@ -7,6 +7,6 @@ while 1:
     # dist: The distance to your cannon of this enemy
     enemy, dist = input().split()
     dist = int(dist)
-    enemies.append([dist,enemy])
-    enemies = sorted(enemies)
-    print(enemies[0][1]) # The name of the most threatening enemy (HotDroid is just one example)
+    enemies.append([enemy,dist])
+    enemies = sorted(enemies, key = lambda x: x[1])
+    print(enemies[0][0]) # The name of the most threatening enemy (HotDroid is just one example)
